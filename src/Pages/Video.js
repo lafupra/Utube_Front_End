@@ -127,13 +127,30 @@ width:100%;
 const Video = () => {
   const vid = useLocation().pathname.split("/")[2]
 
-  const[vidVideo,setvidVideo] = useState({ "userId": "6350e59c37154a9dc6ab5ddc","createdAt":new Date(),"_id":"635141f5f0ed809955dbf12c","likes":["1"],"dislikes":["1"]})
+  const[vidVideo,setvidVideo] = useState({
+    "_id": "635e756641ccf0dbb0c9c06e",
+    "userId": "635a8b1c87eacb76c7eaedb4",
+    "title": "this is the first site video",
+    "desc": "sdfasf",
+    "thumbnailImg": "https://firebasestorage.googleapis.com/v0/b/yotubeapp-d2b9c.appspot.com/o/1667134757423Artboard%201%20copy-100.jpg?alt=media&token=a1a4cbdf-4bab-4b09-af67-1bd670286b1f",
+    "videoUrl": "https://firebasestorage.googleapis.com/v0/b/yotubeapp-d2b9c.appspot.com/o/1667134794077VID_20171014_151653.mp4?alt=media&token=148ad97a-9028-4abf-992e-5504a57abc34",
+    "views": 0,
+    "tags": [
+        "first",
+        "video"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "createdAt": "2022-10-30T13:00:22.564Z",
+    "updatedAt": "2022-10-30T13:00:22.564Z",
+    "__v": 0
+})
   const[vidVideou,setvidVideou] = useState({})
   const[liked,setliked] = useState(false)
   const[disliked,setdisliked] = useState(false)
   const User = useSelector(state => state.user.user)
   const [subscribed , setsubscribed] = useState(false)
-  const [Ouser,setOuser] = useState({"_id":"635141f5f0ed809955dbf12c","subscribedUsers":["dfas"]})
+  const [Ouser,setOuser] = useState( {"_id":"635a8b1c87eacb76c7eaedb4","name":"dune","email":"dune@gmail.com","password":"praful26297","img":"https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png","subscribers":{"$numberInt":"1"},"subscribedUsers":["hello"],"createdAt":{"$date":{"$numberLong":"1666878236183"}},"updatedAt":{"$date":{"$numberLong":"1666879137637"}},"__v":{"$numberInt":"0"})
   
 
   TimeAgo.addLocale(en)
