@@ -1,5 +1,5 @@
 
 
-export const Url = "https://localhost:4000/api"
+export const Url = "http://localhost:4000/api"
 
 
