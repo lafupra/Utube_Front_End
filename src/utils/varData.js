@@ -1,5 +1,5 @@
 
 
-export const Url = "https://ptube-app.herokuapp.com/"
+export const Url = "https://ptube-app.herokuapp.com/api"
 
 
