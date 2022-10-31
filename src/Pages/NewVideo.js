@@ -226,7 +226,7 @@ useEffect(() => {
   getOuser()
 
 // subscribe and unscubscribe
- console.log(Ouser)
+
 
 const usersubscribed = Ouser.subscribedUsers.find((element) => element === vidVideou._id)
 
