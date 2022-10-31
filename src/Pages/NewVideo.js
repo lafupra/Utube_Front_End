@@ -139,7 +139,7 @@ const NewVideo = () => {
     const[disliked,setdisliked] = useState(false)
     const User = useSelector(state => state.user.user)
     const [subscribed , setsubscribed] = useState(false)
-    const [Ouser,setOuser] = useState({"_id":"635141f5f0ed809955dbf12c","subscribedUsers":["dfas"]})
+    const [Ouser,setOuser] = useState({"_id":"635141f5f0ed809955dbf12c","subscribedUsers":["dfas"],'subscribers':["1"]})
     
   
   
@@ -226,7 +226,7 @@ useEffect(() => {
   getOuser()
 
 // subscribe and unscubscribe
- 
+ console.log(Ouser)
 
 const usersubscribed = Ouser.subscribedUsers.find((element) => element === vidVideou._id)
 
