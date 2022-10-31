@@ -40,7 +40,10 @@ const Home = () => {
       setVideos(videos.data)
     }
     getVideo()
+  
   }, [])
+
+
  
   return (
     <Container>

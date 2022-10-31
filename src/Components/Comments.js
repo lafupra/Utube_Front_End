@@ -35,7 +35,7 @@ const Submit = styled.button`
 
 const Comments = ({vidVideo}) => {
 const[tvidComments,setTvidComments] = useState([
-  {"_id":"635a8b1c87eacb76c7eaedb4","name":"dune","email":"dune@gmail.com","password":"praful26297","img":"https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png","subscribers":{"$numberInt":"1"},"subscribedUsers":["hello"],"createdAt":{"$date":{"$numberLong":"1666878236183"}},"updatedAt":{"$date":{"$numberLong":"1666879137637"}},"__v":{"$numberInt":"0"}}
+  {"_id":"635a8b1c87eacb76c7eaedb4","name":"dune","email":"dune@gmail.com","password":"praful26297","img":"https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png","subscribers":["1"],"subscribedUsers":["hello"],"createdAt":new Date()}
 ])
 
 const User = useSelector(state=> state.user.user)

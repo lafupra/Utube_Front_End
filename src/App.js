@@ -4,11 +4,12 @@ import Menu from "./Components/Menu"
 import Navbar from "./Components/Navbar"
 import { darkTheme,lightTheme } from "./utils/Theme"
 import Home from "./Pages/Home"
-import Video from "./Pages/Video"
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import SignIn from "./Components/SignIn"
 import Register from "./Components/Register"
 import Upload from "./Components/Upload"
+import NewVideo from "./Pages/NewVideo"
+
 
 
 
@@ -37,7 +38,7 @@ function App() {
 const [userDetails,setuserDetails]  = useState({})
   const [Reg,setReg] = useState(false)
   const [upload,setupload] = useState(false)
- 
+  
 
 
 
@@ -56,7 +57,7 @@ const [userDetails,setuserDetails]  = useState({})
 {signIn && <SignIn signIn = {signIn} setsignIn= {setsignIn}  userDetails={userDetails} setuserDetails={setuserDetails} Reg={Reg} setReg={setReg}/>}
 
 {Reg && <Register signIn = {signIn} setsignIn= {setsignIn}  userDetails={userDetails} setuserDetails={setuserDetails} Reg={Reg} setReg={setReg}/>}
-{upload && <Upload upload={upload} setupload={setupload} signIn={signIn} setsignIn={setsignIn}/>}
+{upload && <Upload upload={upload} setupload={setupload}/>}
 
 
 
@@ -68,8 +69,8 @@ const [userDetails,setuserDetails]  = useState({})
    
       <Routes>
         <Route path="/"   element={<Home/>}/>
-        <Route path="/video" element={<Video/>}/>
-        <Route path="/video/:vid" element={<Video/>}/>
+        <Route path="/video" element={<NewVideo/>}/>
+        <Route path="/video/:vid" element={<NewVideo/>}/>
       
         
       </Routes>

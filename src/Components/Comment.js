@@ -60,7 +60,7 @@ font-size:14px;
 align-items:center;
 `
 const Comment = ({comments}) => {
-const [user,setuser] = useState({"_id":"635a8b1c87eacb76c7eaedb4","name":"dune","email":"dune@gmail.com","password":"praful26297","img":"https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png","subscribers":{"$numberInt":"1"},"subscribedUsers":["hello"],"createdAt":{"$date":{"$numberLong":"1666878236183"}},"updatedAt":{"$date":{"$numberLong":"1666879137637"}},"__v":{"$numberInt":"0"}})
+const [user,setuser] = useState({"_id":"635a8b1c87eacb76c7eaedb4","name":"dune","email":"dune@gmail.com","password":"praful26297"})
   
 
   TimeAgo.addLocale(en)
