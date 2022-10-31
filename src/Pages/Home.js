@@ -9,6 +9,12 @@ display:flex;
 justify-content:space-between;
 gap:10px;
 flex-wrap:wrap;
+@media screen and (max-width:650px){
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+}
 `
 
 

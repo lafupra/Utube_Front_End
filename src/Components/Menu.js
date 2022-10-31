@@ -24,11 +24,12 @@ import {Link} from "react-router-dom"
 const Container = styled.div`
 flex:1;
 background-color:${({theme}) => theme.bgLighter};
-height:100vh;
 color:${({theme}) => theme.text};
 font-size:14px;
 position:sticky;
 top:0;
+left:0;
+display:${props=>props.OpenMenu === true ? "visible" : "none"};
 `
 
 const Wrapper = styled.div`
@@ -105,7 +106,7 @@ gap:5px;
 `
 
 
-const Menu = ({darkMode,setdarkMode,signIn,setsignIn,upload,setupload}) => {
+const Menu = ({darkMode,setdarkMode,signIn,setsignIn,upload,setupload,OpenMenu}) => {
  
 
 
@@ -116,7 +117,7 @@ const Menu = ({darkMode,setdarkMode,signIn,setsignIn,upload,setupload}) => {
     
   return (
 
-    <Container>
+    <Container OpenMenu={OpenMenu}>
         <Wrapper>
 
           <Link to="/" style={{color:"inherit"}}>

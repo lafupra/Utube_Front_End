@@ -14,17 +14,19 @@ import NewVideo from "./Pages/NewVideo"
 
 
 
+
 const Container = styled.div`
 z-index:1;
 display:flex;
 position:relative;
-
+min-height:100vh;
 `
 
 
 const Main = styled.div`
 flex:7;
 background-color:${({theme}) => theme.bg};
+
 `
 
 const Wrapper = styled.div`
@@ -38,6 +40,7 @@ function App() {
 const [userDetails,setuserDetails]  = useState({})
   const [Reg,setReg] = useState(false)
   const [upload,setupload] = useState(false)
+  const [OpenMenu,setOpenMenu] = useState(false)
   
 
 
@@ -52,7 +55,7 @@ const [userDetails,setuserDetails]  = useState({})
     <Container className="Container" id="ContainerId">
     <BrowserRouter>
 
-      <Menu  setdarkMode={setdarkMode} darkMode={darkMode} signIn={signIn} setsignIn={setsignIn} upload = {upload} setupload = {setupload} />
+      <Menu  setdarkMode={setdarkMode} darkMode={darkMode} signIn={signIn} setsignIn={setsignIn} upload = {upload} setupload = {setupload} OpenMenu = {OpenMenu} />
 
 {signIn && <SignIn signIn = {signIn} setsignIn= {setsignIn}  userDetails={userDetails} setuserDetails={setuserDetails} Reg={Reg} setReg={setReg}/>}
 
@@ -63,7 +66,7 @@ const [userDetails,setuserDetails]  = useState({})
 
       <Main className="Main" id="MainId">
 
-      <Navbar/>
+      <Navbar  OpenMenu = {OpenMenu} setOpenMenu = {setOpenMenu} />
 
       <Wrapper>
    

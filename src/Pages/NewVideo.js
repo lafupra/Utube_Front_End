@@ -29,9 +29,13 @@ gap:24px;
 const Content = styled.div`
 flex:6;
 
+
+
 `
 
 const VideoWrapper = styled.div`
+
+
 `
 const Titles = styled.h1`
 font-size:22px;
@@ -121,10 +125,16 @@ border:none;
 `
 
 const Recommendation = styled.div`
-flex:4;
+flex:1.5;
 width:100%;
+@media screen and (max-width:650px){
+  display:none;
+  
+  }
+
 
 `
+
 
 
 const NewVideo = () => {
@@ -343,7 +353,7 @@ usersubscribed === vidVideou._id ? setsubscribed(true) : setsubscribed(false)
   
       <Content>
         <VideoWrapper>
-        <iframe width="1280" height="720" src={vidVideo.videoUrl} title="Drishyam 2 - OFFICIAL TRAILER | Ajay Devgn, Akshaye Khanna, Tabu, Shriya Saran | Abhishek Pathak" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <iframe width = "100%" height="750" src={vidVideo.videoUrl} title="Drishyam 2 - OFFICIAL TRAILER | Ajay Devgn, Akshaye Khanna, Tabu, Shriya Saran | Abhishek Pathak" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       
         </VideoWrapper>
         <Titles className="Title" id="TitleId">

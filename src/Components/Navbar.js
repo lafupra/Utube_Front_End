@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import {AiOutlineSearch} from "react-icons/ai"
 import {MdOutlineAccountCircle} from "react-icons/md"
+import {AiOutlineMenu} from "react-icons/ai"
 
 
 const Container = styled.div`
@@ -60,13 +61,13 @@ align-items:center;
 gap:5px;
 `
 
-const Navbar = () => {
+const Navbar = ({OpenMenu,setOpenMenu}) => {
   return (
     <>
       <Container>
         <Wrapper>
 
-
+<AiOutlineMenu style={{color:"white",position:"absolute",left:"20px"}} onClick={()=> setOpenMenu(!OpenMenu)}/>
           <Search>
             <Input placeholder="search"/>
             <AiOutlineSearch/>
